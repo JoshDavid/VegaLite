@@ -1,0 +1,9 @@
+ Format←{
+⍝ For now, add new lines after we generate
+⍝ Later, we might want to build this in during construction
+⍝ ⍵ ←→ JSON txt
+     NL←⎕UCS 13
+     i←⍸⍵∊'{}[],'
+     c←⍵[i]
+     ⍕(c,¨(≢c)⍴NL)(@i)⍵
+ }

@@ -1,0 +1,6 @@
+ InjectData←{
+⍝ ⍺ ←→ JSON text
+⍝ ⍵ ←→ Complete data property to inject
+     d←Format Table2Data ⍵
+     (1↑⍺),d,(1↓⍺)
+ }

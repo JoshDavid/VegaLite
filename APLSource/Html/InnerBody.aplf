@@ -1,0 +1,9 @@
+ InnerBody←{
+⍝ ⍵ ←→ JSON spec
+     b←'<div id="vis"></div>'
+     b,←'<script> '
+     b,←'var vlSpec = ',⍵,NL
+     b,←'vegaEmbed(''#vis'',vlSpec);'
+     b,←'</script>'
+     b
+ }

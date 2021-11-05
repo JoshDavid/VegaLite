@@ -1,0 +1,13 @@
+ InitHtml←{
+⍝ TODO : Maybe Use the HTML github library to build this page?
+⍝ For proof of concept, just write it here
+     h←'<!DOCTYPE HTML>',NL
+     h,←'<html>',NL
+     h,←'<head>',NL
+     h,←'<meta charset="utf-8" />',NL
+     h,←'</head>',NL
+     h,←'<body>',NL
+     h,←'</body>',NL
+     h,←'</html>'
+     h
+ }

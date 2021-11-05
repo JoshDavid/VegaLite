@@ -1,0 +1,14 @@
+ PackageArgs←{
+⍝ Genericly fill arguments into ns
+⍝ ⍺ ←→ ns
+⍝ ⍵ ←→ Vector of axes data
+     ⎕IO←0
+     ns c←2↑⍺,0
+     0∊⍴⍵:ns
+     e←ns.encoding
+     a←⍎''e.⎕NS⍨c⊃'xyz'
+     d←⊃⍵
+     a.field←⊃d
+     a.type←DataType 1↓d
+     ns(c+1)∇ 1↓⍵
+ }

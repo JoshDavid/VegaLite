@@ -1,0 +1,11 @@
+ ParseArgs←{
+⍝ ⍵ ←→ Matrix with headers, or V of V
+⍝ ← ←→ (XField|XData)..(ZField|ZData)..
+     r←⍴⍴⍵
+    ⍝ Right now, assume matrix format
+     h←1↑⍵
+     d←1↓⍵
+     ↓⍉h d
+
+
+ }

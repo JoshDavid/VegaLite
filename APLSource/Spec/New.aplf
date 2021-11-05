@@ -1,0 +1,6 @@
+ New←{
+     _←⎕THIS.⎕EX's'
+     ns←⍎'s'⎕NS''
+     ns.schema←Schema''
+     ns
+ }

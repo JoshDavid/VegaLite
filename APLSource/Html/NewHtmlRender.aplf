@@ -1,0 +1,7 @@
+ NewHtmlRender←{
+     n←'hr'{⍺,⍕+/(⊂⍺)⍷(≢⍺)↑¨⍵}⎕NL-9
+     hr←⍎n ⎕WC'HtmlRenderer'(stdInt'')
+     hr.Caption←'APL2Vega'
+     hr.HTML←InitHtml''
+     hr
+ }

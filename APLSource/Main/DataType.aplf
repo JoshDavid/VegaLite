@@ -1,0 +1,9 @@
+ DataType←{
+⍝ ⍵ ←→ Raw data
+⍝ ← ←→ VegaLite datatype representation
+⍝  One of: quantitative, nominal
+⍝  Not yet implemented:  ordinal, temporal, geojson
+⍝ See https://vega.github.io/vega-lite/docs/type
+     ⎕IO←0
+     (IsChar ⍵)⊃'quantitative' 'nominal'
+ }

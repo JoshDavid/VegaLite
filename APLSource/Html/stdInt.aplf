@@ -1,0 +1,6 @@
+ stdInt←{
+ ⍝ Standard Intercept Protocol. Relies on V.17
+     cbURL←'*' ⍝ URL of the callback
+     tm←1 2⍴cbURL 0               ⍝ Trigger matrix
+     'InterceptedURLs'tm           ⍝ Only intercept the callback
+ }

@@ -1,0 +1,7 @@
+ Inject←{
+⍝ ⍺ ←→ html text
+⍝ ⍵ ←→ (tag) (values)
+     t v←⍵
+     i←(≢t)+⍸t⍷⍺
+     (i↑⍺),v,(i↓⍺)
+ }
