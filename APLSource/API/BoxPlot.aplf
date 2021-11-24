@@ -1,0 +1,17 @@
+ BoxPlot←{
+⍝ ⍵ ←→ APL matrix with headers
+     ns←##.Spec.New''
+     ns.description←'A vertical box plot showing median, min, and max block hours.'
+     ns.width←800
+     ns.height←400
+     m←⍎'mark'ns.⎕NS''
+     m.type←'boxplot'
+     m.extent←'min-max'
+     ns←ns ##.Spec.PackageArgs↓⍉⍵
+     ⍝e.y.scale←⎕NS''
+     ⍝ ns.encoding.y.scale.zero←'false' ⍝ revisit
+     s←##.Spec.ToJson ns
+     j←s ##.Spec.InjectData ⍵
+     ##.Html.Render j
+
+ }

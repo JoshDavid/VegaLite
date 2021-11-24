@@ -1,0 +1,6 @@
+ UniqueName←{
+ ⍝ Unique name created in space ⍺ with prefix ⍵
+     ⍺←⎕THIS
+     o←⍺.⎕NL-9
+     ⍵,⍕+/(⊂⍵)⍷(≢⍵)↑¨o
+ }

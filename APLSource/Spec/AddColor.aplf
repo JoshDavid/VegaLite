@@ -1,0 +1,8 @@
+ AddColor←{
+⍝ for now, base color off x axis
+⍝ ⍵ ←→ ns
+     e←⍵.encoding
+     c←⍎'color'e.⎕NS''
+     c.(field type)←e.x.(field type)
+     ⍵
+ }

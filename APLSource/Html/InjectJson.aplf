@@ -2,7 +2,6 @@
 ⍝ ⍺ ←→ HtmlRenderer object
 ⍝ ⍵ ←→ JSON spec
      h←⍺.HTML
-    ⍝ Instead of reusing variables, maybe make this recursive?
      h←h Inject'<head>'(InnerHead'')
      h←h Inject'<body>'(InnerBody ⍵)
      ⍺.HTML←h
