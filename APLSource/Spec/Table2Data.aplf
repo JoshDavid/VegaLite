@@ -7,11 +7,11 @@
 ⍝ Then, inject the raw JSON into the spec @ end
 ⍝ VegaLite takes an incredibly ineffecient data representation model..
      h←,1↑⍵
-     DblQuote←{
+     DoubleQuote←{
          q←(' ','"')[⎕IO+IsChar ⍵]
          q Wrap¨⍵
      }
-     d←↓⍉CommaSeperate(⍤¯1)DblQuote 1↓⍵
+     d←↓⍉CommaSeperate(⍤¯1)DoubleQuote 1↓⍵
      j←h{
          k←'"'Wrap ⍺
          (⊂k,' : '),¨⍵

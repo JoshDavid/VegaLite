@@ -1,7 +1,0 @@
- New←{
-
-
-     {parent}New'Encoding'⎕JSON
-
-
- }

@@ -1,3 +1,4 @@
  IsChar←{
-     ∧/(0 2∊⍨10|⎕DR)¨⍵
+⍝ Taking the prototype of the arary is much more performant than ⎕DR'ing ¨
+     ~0⍷(⊃0⍴⊂)⍵
  }

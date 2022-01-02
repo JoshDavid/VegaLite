@@ -4,5 +4,5 @@
 ⍝  One of: quantitative, nominal
 ⍝  Not yet implemented:  ordinal, temporal, geojson
 ⍝ See https://vega.github.io/vega-lite/docs/type
-     (⎕IO+IsChar ⍵)⊃'quantitative' 'nominal'
+     (⎕IO+∧/IsChar ⍵)⊃'quantitative' 'nominal'
  }
