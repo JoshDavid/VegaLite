@@ -1,16 +1,18 @@
- BoxPlot←{
+ ScatterPlot←{
  ⍝ ⍵ ←→ APL matrix with headers
  ⍝ ⍺ ←→ Optional existing HTML document (WIP -- prob need a full param ns)
+ ⍝ TODO: Multi scatter plots in a new fn ? Or figure out how to
+ ⍝ Represent several arguments w diff shapes/colors on same graph
      ⍺←⊢
      ns←##.Spec.New''
-     ns.description←'vertical box plot'
+     ns.description←'Scatter plot'
      ns.width←800
      ns.height←400
-     m←⍎'mark'ns.⎕NS''
-     m.type←'boxplot'
-     m.extent←'min-max'
+     ⍝m←⍎'mark'ns.⎕NS''
+     ⍝m.type←'boxplot'
+     ns.mark←'point'
+     ⍝m.extent←'min-max'
      ns←ns ##.Spec.PackageArgs↓⍉⍵
-     ns←ns ##.Spec.AddColor ns
      s←##.Spec.ToJson ns
      j←s ##.Spec.InjectData ⍵
      ⍺ ##.Html.Render j
