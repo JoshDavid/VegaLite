@@ -1,4 +1,7 @@
-# VegaLite Release 0.0.3                    
+# VegaLite Release 0.0.4                    
+1. test core
+
+# VegaLite Release 0.0.3 2022-01-08 16:21:11
 1. add sample data
 2. add scatterplot
 3. refactor
