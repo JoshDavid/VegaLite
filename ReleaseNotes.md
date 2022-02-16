@@ -1,4 +1,7 @@
-# VegaLite Release 0.0.4                    
+# VegaLite Release 0.0.5                    
+1. negative input fix
+
+# VegaLite Release 0.0.4 2022-01-10 10:23:07
 1. test core
 
 # VegaLite Release 0.0.3 2022-01-08 16:21:11
