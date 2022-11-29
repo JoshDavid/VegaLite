@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "magick-wasm": "^0.0.3"
+  }
+}

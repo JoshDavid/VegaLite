@@ -2,3 +2,5 @@ aplcore
 .acre/
 dist/
 Assets/Runtime/LocallyDerived/
+node_modules/
+package-lock.json
