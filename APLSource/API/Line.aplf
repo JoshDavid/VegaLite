@@ -1,0 +1,20 @@
+ Line←{
+ ⍝ ⍵ ←→ APL matrix with headers
+ ⍝ ⍺ ←→ Optional existing HTML document (WIP -- prob need a full param ns)
+ ⍝ TODO: Multi scatter plots in a new fn ? Or figure out how to
+ ⍝ Represent several arguments w diff shapes/colors on same graph
+     ⍺←⊢
+     ns←##.Spec.New''
+     ns.description←'Line graph'
+     ns.width←1000
+     ns.height←600
+     m←⍎'ns.mark'⎕NS''
+     m.type←'line'
+     m.strokeWidth←2
+     ⍝m.extent←'min-max'
+     ⍝ns.strokeWidth←3
+     ns←ns ##.Spec.PackageArgs↓⍉⍵
+     s←##.Spec.ToJson ns
+     j←s ##.Spec.InjectData ⍵
+     ⍺ ##.Html.Render j
+ }

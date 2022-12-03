@@ -1,0 +1,8 @@
+ GenerateLines←{
+⍝ ⍵ ←→ (≢points per graph) [≢series per graph] [≢graphs]
+⍝ ⍺ ←→ (min max) integers
+⍝ Returns several matrices of y values
+     (p s g)←1⌈3↑⍵
+     (min max)←⍺
+     ⊂⍤¯1?g p s⍴max-min
+ }
