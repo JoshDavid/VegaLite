@@ -4,7 +4,9 @@
      h←⍺.HTML
      h←h Inject'<head>'(InnerHead'')
      h←h Inject'<body>'(InnerBody ⍵)
-     h←SaveSvgButton h
+     (script btn)←SavePngButton''
+     h←h Inject'<head>'script
+     h←h Inject'<body>'btn
      ⍺.HTML←h
      ⍺
  }
