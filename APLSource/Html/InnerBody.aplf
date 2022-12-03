@@ -3,7 +3,9 @@
      b←'<div id="vis"></div>'
      b,←'<script> '
      b,←'var vlSpec = ',⍵,NL
-     b,←'vegaEmbed(''#vis'',vlSpec);'
+     b,←'vegaEmbed(''#vis'',vlSpec, {"actions": false});'
+    ⍝ TODO actions: false using HTMLRenderer only?
+    ⍝      else figure out how to change the actions menu behaviour
      b,←'</script>'
      b
  }
