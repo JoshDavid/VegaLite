@@ -1,0 +1,4 @@
+ Callback←{
+⍝ ⍵ ←→ WebSocket request from HTMLRenderer
+     ⎕←⍵
+ }
