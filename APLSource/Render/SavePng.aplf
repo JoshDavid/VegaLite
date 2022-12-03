@@ -3,8 +3,10 @@
      b64←'data:image/png;base64,'
      b64≢⍵↑⍨≢b64:11 ⎕SIGNAL'not a base 64 data URL'
      img←⍵↓⍨≢b64
-     tn←'/tmp/graph.png'⎕NCREATE⍠'IfExists' 'Replace'⊢0
+     path←'/tmp/graph.png'
+     tn←path ⎕NCREATE⍠'IfExists' 'Replace'⊢0
      data←⎕UCS base64 img
      _←data ⎕NAPPEND tn
+     ⎕←'Saved: ',path
      ⎕NUNTIE tn
  }
