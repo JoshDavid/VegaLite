@@ -1,4 +1,6 @@
  Callback←{
 ⍝ ⍵ ←→ WebSocket request from HTMLRenderer
-     ⎕←⍵
+     data←⎕JSON 4⊃⍵
+     img←'data:image/png'
+     img≡data↑⍨≢img:SavePng data
  }

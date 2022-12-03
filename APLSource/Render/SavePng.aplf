@@ -5,5 +5,6 @@
      img←⍵↓⍨≢b64
      tn←'/tmp/graph.png'⎕NCREATE⍠'IfExists' 'Replace'⊢0
      data←⎕UCS base64 img
-     data ⎕NAPPEND tn
+     _←data ⎕NAPPEND tn
+     ⎕NUNTIE tn
  }

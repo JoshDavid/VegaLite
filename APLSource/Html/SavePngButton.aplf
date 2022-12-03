@@ -1,0 +1,11 @@
+ SavePngButton←{
+⍝ ⍵ ←→ HTML text
+     btn←'<button onclick="savePng()">Savg PNG</button>',NL
+     h←⍵ Inject'<body>'btn
+     s←'<script>',NL
+     s,←'socket = new WebSocket("ws://dyalog_root/")',NL
+     s,←'const Send = (data) => { socket.send(JSON.stringify(data)) }',NL
+     s,←'const savePng = (_) => {Send("Hello"); Send (document.getElementsByClassName("marks")[0].toDataURL("image/png"))}',NL
+     s,←'</script>',NL
+     h Inject'<head>'s
+ }
