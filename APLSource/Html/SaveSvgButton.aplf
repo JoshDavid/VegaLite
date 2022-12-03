@@ -1,14 +1,10 @@
  SaveSvgButton←{
-⍝ ⍵ ←→ HTML text
+⍝ ⍵ ←→ JSON spec
      btn←'<button onclick="saveSvg()">Savg SVG</button>',NL
-     h←⍵ Inject'<body>'btn
-     s←'<script>',NL
-     s,←'socket = new WebSocket("ws://dyalog_root/")',NL
-     s,←'const Send = (data) => { socket.send(JSON.stringify(data)) }',NL
-     s,←'const saveSvg = (_) => {Send("Hello")}',NL
-⍝ Fetch from data URL
-⍝ document.getElementsByClassName("marks")[0].toDataURL("image/png")
-⍝ Send over WS
-     s,←'</script>',NL
-     h Inject'<head>'s
+     script←'<script>',NL
+     script,←'socket = new WebSocket("ws://dyalog_root/")',NL
+     script,←'const Send = (data) => { socket.send(JSON.stringify(data)) }',NL
+     script,←'const saveSvg = (_) => {Send("Hello"); Send (document.getElementsByClassName("marks")[0].toDataURL("image/png"))}',NL
+     script,←'</script>',NL
+     btn script
  }
