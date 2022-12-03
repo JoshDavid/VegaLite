@@ -1,7 +1,7 @@
  InitEncoding←{
 ⍝ ⍵ ←→ ns
      e←⍎'encoding'⍵.⎕NS''
-     s←⍎'size'e.⎕NS''
-     s.value←90
+ ⍝    s←⍎'size'e.⎕NS''
+ ⍝    s.value←90
      ⍵
  }
