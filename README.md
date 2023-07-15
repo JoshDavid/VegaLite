@@ -5,7 +5,7 @@ This library is an attempt at programatically generating the VegaLite specificat
 Current examples:
 
 BoxPlot:
-![image](https://github.com/JoshDavid/VegaLite/assets/31487826/1a6ec55c-1b42-46e2-a979-f17f1856780e)# VegaLite
+![image](https://github.com/JoshDavid/VegaLite/assets/31487826/1a6ec55c-1b42-46e2-a979-f17f1856780e)
 
 ScatterPlot:
 ![image](https://github.com/JoshDavid/VegaLite/assets/31487826/6eed15fa-818c-49fa-88b7-23a6b6bfcae7)
