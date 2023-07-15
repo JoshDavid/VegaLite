@@ -1,4 +1,3 @@
-# VegaLite
 
 VegaLite is a JavaScript library that provides a high level grammar for describing modern plots and graphs. 
 This library is an attempt at programatically generating the VegaLite specification, and rendered HTML, for you by making inferences based on your dataset so you can quickly produce data visualizations from an APL array with minimal specification neccesary.
@@ -6,13 +5,11 @@ This library is an attempt at programatically generating the VegaLite specificat
 Current examples:
 
 BoxPlot:
-
-![image](https://github.com/JoshDavid/VegaLite/assets/31487826/ff195a45-1405-4b89-bcfa-a38c58dfbbfa)
-
+![image](https://github.com/JoshDavid/VegaLite/assets/31487826/1a6ec55c-1b42-46e2-a979-f17f1856780e)# VegaLite
 
 ScatterPlot:
+![image](https://github.com/JoshDavid/VegaLite/assets/31487826/6eed15fa-818c-49fa-88b7-23a6b6bfcae7)
 
-![image](https://github.com/JoshDavid/VegaLite/assets/31487826/71a0fa8c-6a25-4241-ba85-4dd94b1d1b45)
 
 
 Major version 0 of this library is still very much an exploratory WIP, but it can already be used to produce useful graphics. 
