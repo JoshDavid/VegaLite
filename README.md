@@ -1,6 +1,6 @@
 
 VegaLite is a JavaScript library that provides a high level grammar for describing modern plots and graphs. 
-This library is an attempt at programatically generating the VegaLite specification, and rendered HTML, for you by making inferences based on your dataset so you can quickly produce data visualizations from an APL array with minimal specification neccesary.
+This library is an attempt at programatically generating the VegaLite specification, and rendered HTML, for you by making inferences based on your dataset so you can quickly produce data visualizations from an APL array with little to no specification neccesary.
 
 Current examples:
 
