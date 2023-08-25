@@ -5,13 +5,16 @@
 ⍝ Instead of passing in a spec NS as a left arg, and creating it that way,
 ⍝ I think it will be more efficient to generate the entire JSON in one go
 ⍝ Then, inject the raw JSON into the spec @ end
-⍝ VegaLite takes an incredibly ineffecient data representation model..
+⍝ Generating JSON is a pretty inefficient data representation format -- look into using other file formats
      h←,1↑⍵
+     bChar←IsChar 1↓⍵
      DoubleQuote←{
-         q←(' ','"')[⎕IO+IsChar ⍵]
+         q←(' ','"')[⎕IO+⍺]
          q Wrap¨⍵
      }
-     d←↓⍉CommaSeperate(⍤¯1)DoubleQuote 1↓⍵
+     FixNegatives←{{'¯'⎕R'-'⍕⍵}¨@{~bChar}⍵}
+     w←FixNegatives 1↓⍵
+     d←↓⍉CommaSeperate(⍤¯1)bChar DoubleQuote w
      j←h{
          k←'"'Wrap ⍺
          (⊂k,' : '),¨⍵
