@@ -4,7 +4,6 @@
 ⍝ ⍵ ←→ Vector of axes data
      ⎕IO←0
      ns c←2↑⍺,0
-     ⍝0∊⍴⍵:AddColor ns
      0∊⍴⍵:ns
      e←ns.encoding
      a←⍎''e.⎕NS⍨c⊃'xyz'

@@ -1,8 +1,11 @@
  AddColor←{
-⍝ for now, base color off x axis
 ⍝ ⍵ ←→ ns
+⍝ ⍺ ←→ {axis to base color from (default x)} {Color scheme}
+     ⍺←'x'
      e←⍵.encoding
      c←⍎'color'e.⎕NS''
-     c.(field type)←e.x.(field type)
-     ⍵
+     c.(field type)←(e⍎⊃⍺).(field type)
+     s←⍎'scale'c.⎕NS''
+     1<≢⍺:s.scheme←⊃⌽⍺ ⍝ Redesign (dependent on ≢⍺ + requires axis specification)
+     0
  }

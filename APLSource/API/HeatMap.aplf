@@ -1,0 +1,20 @@
+ HeatMap←{
+ ⍝ ⍵ ←→ APL matrix with headers
+ ⍝ ⍺ ←→ Optional existing HTML document (WIP -- prob need a full param ns)
+ ⍝ TODO: figure out if we should make Color static -- may need separate Corr heatmap function
+     ⍺←⊢
+     ns←##.Spec.New''
+     ns.description←'Grid heat map'
+     ns.width←800
+     ns.height←400
+     m←⍎'mark'ns.⎕NS''
+     m.type←'rect'
+     _←ns ##.Spec.PackageArgs↓⍉⍵
+     _←'z' 'redblue'##.Spec.AddColor ns
+     a←⍎'config.axis'ns.⎕NS''
+     a.grid←'true'
+     a.tickBand←'extent'
+     s←##.Spec.ToJson ns
+     j←s ##.Spec.InjectData ⍵
+     ⍺ ##.Html.Render j
+ }
