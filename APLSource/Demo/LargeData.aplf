@@ -1,0 +1,18 @@
+ LargeData←{
+⍝ Current implementation uses inefficient data representation and transfer
+⍝ EXAMPLE
+⍝ Line from 10k data points?
+     ⍝x←0.0001×⍳1e4
+     x←(÷⍵)×⍳⍵
+     y←1○○2×x
+     data←'x' 'Sine x'⍪⍉↑x y
+     ##.API.Line data
+
+⍝      ]runtime "Demo.LargeData 1e5"
+⍝
+⍝* Benchmarking "Demo.LargeData 1e5"
+⍝             (ms)
+⍝ CPU (avg):  2407
+⍝ Elapsed:    2442
+
+ }

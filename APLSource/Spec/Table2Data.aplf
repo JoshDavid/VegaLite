@@ -1,22 +1,13 @@
  Table2Data←{
 ⍝ ⍵ ←→ APL 2D Matrix representing a data table
+⍝ ← ←→ JSON text representation of table, one object per value
 ⍝ Currently assumes the first row contains headers
 ⍝ TODO: We should be able to accomodate columnar tables as well, etc
 ⍝ Instead of passing in a spec NS as a left arg, and creating it that way,
 ⍝ I think it will be more efficient to generate the entire JSON in one go
 ⍝ Then, inject the raw JSON into the spec @ end
 ⍝ VegaLite takes an incredibly ineffecient data representation model..
-     h←,1↑⍵
-     DoubleQuote←{
-         q←(' ','"')[⎕IO+IsChar ⍵]
-         q Wrap¨⍵
-     }
-     d←↓⍉CommaSeperate(⍤¯1)DoubleQuote 1↓⍵
-     j←h{
-         k←'"'Wrap ⍺
-         (⊂k,' : '),¨⍵
-     }¨d
-     j←'{}'∘Wrap(⍤¯1)⍉↑j
-     t←CommaSeperate↓j
-     ⍕('"data": { "values": ['),t,']},'
+     r←0 ⎕JSON'{}'
+     r.values←0 ⎕JSON 1 ⎕JSON⊂2,⊂⍵
+     1 ⎕JSON r
  }
