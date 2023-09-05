@@ -1,0 +1,9 @@
+ Table2CSV←{
+⍝ ⍵ ←→ Nested table with header row
+⍝ ← ←→ Data object JSON text with raw CSV and format type csv
+     r←0 ⎕JSON'{}'
+     r.values←⍵ ⎕CSV''
+     r.format←0 ⎕JSON'{}'
+     r.format.type←'csv'
+     1 ⎕JSON r
+ }

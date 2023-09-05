@@ -8,11 +8,12 @@
      data←'x' 'Sine x'⍪⍉↑x y
      ##.API.Line data
 
+⍝ Now using raw CSV text to pass data
 ⍝      ]runtime "Demo.LargeData 1e5"
 ⍝
 ⍝* Benchmarking "Demo.LargeData 1e5"
 ⍝             (ms)
-⍝ CPU (avg):  2407
-⍝ Elapsed:    2442
+⍝ CPU (avg):   437
+⍝ Elapsed:     438
 
  }

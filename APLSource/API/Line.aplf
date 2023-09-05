@@ -15,6 +15,6 @@
      ⍝ns.strokeWidth←3
      ns←ns ##.Spec.PackageArgs↓⍉⍵
      s←##.Spec.ToJson ns
-     j←s ##.Spec.(InjectData∘Table2Data)⍵
+     j←s ##.Spec.(InjectData∘Table2CSV)⍵
      ⍺ ##.Html.Render j
  }
