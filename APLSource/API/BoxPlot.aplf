@@ -10,7 +10,7 @@
      m.type←'boxplot'
      m.extent←'min-max'
      ns←ns ##.Spec.PackageArgs↓⍉⍵
-     ns←ns ##.Spec.AddColor ns
+     _←##.Spec.AddColor ns
      s←##.Spec.ToJson ns
      j←s ##.Spec.InjectData ⍵
      ⍺ ##.Html.Render j

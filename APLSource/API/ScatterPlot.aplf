@@ -8,10 +8,7 @@
      ns.description←'Scatter plot'
      ns.width←800
      ns.height←400
-     ⍝m←⍎'mark'ns.⎕NS''
-     ⍝m.type←'boxplot'
      ns.mark←'point'
-     ⍝m.extent←'min-max'
      ns←ns ##.Spec.PackageArgs↓⍉⍵
      s←##.Spec.ToJson ns
      j←s ##.Spec.InjectData ⍵

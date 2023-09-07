@@ -1,0 +1,12 @@
+[
+ 'v1'    'v2'    'cor'
+ 'one'   'one'   1
+ 'one'   'two'   0.5
+ 'one'   'three' 0.3
+ 'two'   'one'   0.5
+ 'two'   'two'   1
+ 'two'   'three' ¯0.7
+ 'three' 'one'   0.3
+ 'three' 'two'   ¯0.7
+ 'three' 'three' 1
+]
