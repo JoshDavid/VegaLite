@@ -1,6 +1,7 @@
  New←{
+ ⍝ ⍵ ←→ Prepopulated NS (Or should we overide @ end of calling fn?)
      n←⎕THIS ##.Utils.UniqueName's'
-     ns←⍎n ⎕NS''
+     ns←⍎n ⎕NS ⍵
      ns.schema←Schema''
      ns←InitEncoding ns
      ns

@@ -1,0 +1,10 @@
+ Alpha←{
+ ⍝ [WIP] as this gets designed (brainstorming what variables make sense)
+ ⍝ Generates default left arg that can be passed to any API function
+     a←⎕NS''
+     a.HtmlRendererObj←⊢
+     a.SpecOverride←⎕NS'' ⍝ NS, VL String, or both? Override/augment default spec with this
+     a
+     ⍝ a.ReuseExistingHR    ⍝ Experiment with: Keep a cached "invisible" HRobj to allow quick displays?
+     ⍝ a.DocumentLandingDiv ⍝ Where the image should land on an existing page...
+ }

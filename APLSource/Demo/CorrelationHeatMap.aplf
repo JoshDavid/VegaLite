@@ -1,0 +1,11 @@
+ CorrelationHeatMap←{
+ ⍝ ⍵ ←→ Data for HeatMap function
+ ⍝ Special case of HeatMap used for viewing correlations
+     a←##.Utils.Alpha''
+     o←a.SpecOverride
+     f←'encoding.color.scale'
+     _←f o.⎕NS'' ⋄ s←o⍎f
+     s.scheme←'redblue'
+     s.domain←¯1 1
+     a ##.API.HeatMap ⍵
+ }
