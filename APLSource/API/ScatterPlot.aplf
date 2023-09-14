@@ -10,7 +10,7 @@
      ns.height←400
      ns.mark←'point'
      ns←ns ##.Spec.PackageArgs↓⍉⍵
-     s←##.Spec.ToJson ns
-     j←s ##.Spec.InjectData ⍵
+     ns←ns ##.Spec.InjectData ⍵
+     j←##.Spec.ToJson ns     
      ⍺ ##.Html.Render j
  }

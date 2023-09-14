@@ -13,7 +13,7 @@
      a←⍎'config.axis'ns.⎕NS''
      a.grid←'true'
      a.tickBand←'extent'
-     s←##.Spec.ToJson ns
-     j←s ##.Spec.InjectData ⍵
+     ns←ns ##.Spec.InjectData ⍵
+     j←##.Spec.ToJson ns
      ⍺.HtmlRendererObj ##.Html.Render j
  }
