@@ -1,6 +1,5 @@
  ToJson←{
 ⍝ ⍵ ←→ Namespace
 ⍝ ← ←→ JSON representaqtion
-     j←⎕JSON(⍠'Compact' 0)⍵
-     ∊(⊂'"$')@{'"schema":'⍷⍵}j
+     1 ⎕JSON(⍠'Compact' 0)⍵
  }
