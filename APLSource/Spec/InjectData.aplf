@@ -1,6 +1,8 @@
  InjectData←{
-⍝ ⍺ ←→ JSON text
-⍝ ⍵ ←→ Complete data property to inject
-     d←Format Table2Data ⍵
-     (1↑⍺),d,(1↓⍺)
+⍝ ⍺ ←→ JSON object VegaLite specification
+⍝ ⍵ ←→ APL Matrix representating a data table
+     ⍺.data←Table2Data ⍵
+     ⍺.data.format←0 ⎕JSON'{}'
+     ⍺.data.format.type←'csv'
+     ⍺
  }

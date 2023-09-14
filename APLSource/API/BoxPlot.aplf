@@ -11,7 +11,7 @@
      m.extent←'min-max'
      ns←ns ##.Spec.PackageArgs↓⍉⍵
      _←##.Spec.AddColor ns
-     s←##.Spec.ToJson ns
-     j←s ##.Spec.InjectData ⍵
+     ns←ns ##.Spec.InjectData ⍵
+     j←##.Spec.ToJson ns
      ⍺ ##.Html.Render j
  }
