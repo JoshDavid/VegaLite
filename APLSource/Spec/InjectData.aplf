@@ -1,7 +1,8 @@
  InjectData←{
 ⍝ ⍺ ←→ JSON object VegaLite specification
-⍝ ⍵ ←→ APL Matrix representating a data table
-     ⍺.data←Table2Data ⍵
+⍝ ⍵ ←→ APL Matrix or Vector of Vectors representating a data table
+     _←'data.format'⍺.⎕NS''
+     ⍺.data.values←⍵ ⎕CSV''
      ⍺.data.format←0 ⎕JSON'{}'
      ⍺.data.format.type←'csv'
      ⍺
