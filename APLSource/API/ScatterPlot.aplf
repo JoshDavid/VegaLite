@@ -3,14 +3,13 @@
  ⍝ ⍺ ←→ Optional existing HTML document (WIP -- prob need a full param ns)
  ⍝ TODO: Multi scatter plots in a new fn ? Or figure out how to
  ⍝ Represent several arguments w diff shapes/colors on same graph
-     ⍺←⊢
-     ns←##.Spec.New''
-     ns.description←'Scatter plot'
-     ns.width←800
-     ns.height←400
-     ns.mark←'point'
-     ns←ns ##.Spec.PackageArgs↓⍉⍵
-     ns←ns ##.Spec.InjectData ⍵
-     j←##.Spec.ToJson ns     
-     ⍺ ##.Html.Render j
+     ⍺←##.Utils.Alpha''
+     ns←##.Spec.New ⍺.SpecOverride
+     s←##.Spec.GetSpecNS ns
+     s.description←'Scatter plot'
+     s.width←800
+     s.height←400
+     s.mark←'point'
+     _←ns ##.Spec.PackData ⍵
+     ⍺.HtmlRendererObj ##.Html.Render ns
  }

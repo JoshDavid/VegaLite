@@ -1,17 +1,16 @@
  BoxPlot←{
  ⍝ ⍵ ←→ APL matrix with headers
  ⍝ ⍺ ←→ Optional existing HTML document (WIP -- prob need a full param ns)
-     ⍺←⊢
+     ⍺←##.Utils.Alpha''
      ns←##.Spec.New''
-     ns.description←'vertical box plot'
-     ns.width←800
-     ns.height←400
-     m←⍎'mark'ns.⎕NS''
+     s←##.Spec.GetSpecNS ns
+     s.description←'vertical box plot'
+     s.width←800
+     s.height←400
+     m←⍎'mark's.⎕NS''
      m.type←'boxplot'
      m.extent←'min-max'
-     ns←ns ##.Spec.PackageArgs↓⍉⍵
+     _←ns ##.Spec.PackData ⍵
      _←##.Spec.AddColor ns
-     ns←ns ##.Spec.InjectData ⍵
-     j←##.Spec.ToJson ns
-     ⍺ ##.Html.Render j
+     ⍺.HtmlRendererObj ##.Html.Render ns
  }

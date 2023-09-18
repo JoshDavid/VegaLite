@@ -3,8 +3,7 @@
  ⍝ Special case of HeatMap used for viewing correlations
      a←##.Utils.Alpha''
      o←a.SpecOverride
-     f←'encoding.color.scale'
-     _←f o.⎕NS'' ⋄ s←o⍎f
+     s←⍎'encoding.color.scale' o.⎕NS ''
      s.scheme←'redblue'
      s.domain←¯1 1
      a ##.API.HeatMap ⍵

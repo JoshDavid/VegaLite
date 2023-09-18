@@ -1,0 +1,10 @@
+ PackData←{
+ ⍝ ⍺ ←→ master spec ns
+ ⍝ ⍵ ←→ data
+     e←⊃9≠⍺.⎕NC'spec.encoding.x'
+     ⍝ ↑Hmm, done for Matrix op, definitly need to discuss cons of this approach:
+     ⍝ e.g.: partial x spec done outside of Mat op?
+     _←⍺ PackageArgs(⍣e)↓⍉⍵
+     _←⍺ InjectData ⍵
+     0
+  }

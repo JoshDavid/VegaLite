@@ -1,0 +1,5 @@
+ GetSpecNS←{
+ ⍝ VL specs require nesting certain properties under spec sometimes -- but not always. Argh!
+    9=⍵.⎕NC 'spec':⍵.spec
+    ⍵
+ }

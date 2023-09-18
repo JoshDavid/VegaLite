@@ -1,6 +1,7 @@
  Render←{
 ⍝ ⍺ ←→ HR object, creates one if none passed in
-⍝ ⍵ ←→ JSON string of the spec
+⍝ ⍵ ←→ NS of the entire spec
+     j←##.Spec.ToJson ⍵
      ⍺←NewHtmlRender''
-     ⍺ InjectJson ⍵
+     ⍺ InjectJson j
  }

@@ -1,19 +1,17 @@
  HeatMap←{
  ⍝ ⍵ ←→ APL matrix with headers
  ⍝ ⍺ ←→ Optional parameter namespace
-     ⍺←##.Utils.Alpha ''
+     ⍺←##.Utils.Alpha''
      ns←##.Spec.New ⍺.SpecOverride
      ns.description←'Grid heat map'
      ns.width←800
      ns.height←400
      m←⍎'mark'ns.⎕NS''
      m.type←'rect'
-     _←ns ##.Spec.PackageArgs↓⍉⍵
-     _←'z'##.Spec.AddColor ns
      a←⍎'config.axis'ns.⎕NS''
      a.grid←'true'
      a.tickBand←'extent'
-     ns←ns ##.Spec.InjectData ⍵
-     j←##.Spec.ToJson ns
-     ⍺.HtmlRendererObj ##.Html.Render j
+     _←ns ##.Spec.PackData ⍵
+     _←'z'##.Spec.AddColor ns
+     ⍺.HtmlRendererObj ##.Html.Render ns
  }
