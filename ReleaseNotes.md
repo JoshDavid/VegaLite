@@ -1,4 +1,23 @@
-# VegaLite Release 0.0.6                    
+# VegaLite Release 0.0.7                    
+1. add Matrix operator
+2. inject data uses CSV directly
+3. data as tables for now
+4. use name mangled JSON instead of char insertion
+5. simple tests
+6. inject data as CSV text into spec namespace
+7. data injection speed test
+8. Generalize HeatMap function + Try override NS left arg
+9. development document
+10. first pass at HeatMap function
+11. Fix negative input
+12. Update README.md
+13. Update README.md
+14. Update README.md
+15. Create README.md
+16. typo
+17. m
+
+# VegaLite Release 0.0.6 2022-03-07 17:58:58
 1. test
 
 # VegaLite Release 0.0.5 2022-02-16 12:28:29
