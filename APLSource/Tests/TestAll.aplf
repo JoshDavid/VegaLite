@@ -6,3 +6,5 @@
  ##.API.BoxPlot ##.Demo.penguin
  ##.API.ScatterPlot ##.Demo.car[;4 8]
  ##.Demo.(CorrelationHeatMap corrMat)
+ ##.API.BarChart'XY'⍪'ABC',⍪10 20 30
+ ##.API.(ScatterPlot Matrix)##.Demo.car[;2+⍳3]

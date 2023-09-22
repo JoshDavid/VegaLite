@@ -1,0 +1,14 @@
+ BarChart←{
+ ⍝ ⍵ ←→ APL matrix with headers
+ ⍝ ⍺ ←→ Optional parameter namespace
+     ⍺←##.Utils.Alpha''
+     ns←##.Spec.New''
+     s←##.Spec.GetSpecNS ns
+     s.description←'Bar chart'
+     s.width←800
+     s.height←400
+     s.mark←'bar'
+     _←ns ##.Spec.PackData ⍵
+     _←##.Spec.AddColor ns
+     ⍺.HtmlRendererObj ##.Html.Render ns
+ }
