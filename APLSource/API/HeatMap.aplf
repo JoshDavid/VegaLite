@@ -1,5 +1,5 @@
  HeatMap←{
- ⍝ ⍵ ←→ APL matrix with headers
+ ⍝ ⍵ ←→ APL matrix with headers (3 cols)
  ⍝ ⍺ ←→ Optional parameter namespace
      ⍺←##.Utils.Alpha''
      ns←##.Spec.New ⍺.SpecOverride
@@ -12,6 +12,5 @@
      a.grid←'true'
      a.tickBand←'extent'
      _←ns ##.Spec.PackData ⍵
-     _←'z'##.Spec.AddColor ns
      ⍺.HtmlRendererObj ##.Html.Render ns
  }

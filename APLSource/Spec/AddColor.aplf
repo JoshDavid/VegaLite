@@ -5,7 +5,5 @@
      e←⍵.encoding
      c←⍎'color'e.⎕NS''
      c.(field type)←(e⍎⊃⍺).(field type)
-     s←⍎'scale'c.⎕NS''
-     1<≢⍺:s.scheme←⊃⌽⍺ ⍝ Redesign (dependent on ≢⍺ + requires axis specification)
      0
  }

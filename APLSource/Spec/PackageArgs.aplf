@@ -6,7 +6,8 @@
      ns c←2↑⍺,0
      0∊⍴⍵:ns
      e←ns.encoding
-     a←⍎''e.⎕NS⍨c⊃'xyz'
+     l←'xy',⊂'color'
+     a←⍎''e.⎕NS⍨c⊃l
      d←⊃⍵
      a.field←⊃d
      a.type←DataType 1↓d
