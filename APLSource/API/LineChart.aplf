@@ -1,0 +1,14 @@
+ LineChart←{
+ ⍝ ⍵ ←→ APL matrix with headers
+ ⍝ ⍺ ←→ Optional param NS
+     ⍺←##.Utils.Alpha''
+     ns←##.Spec.New ⍺.SpecOverride
+     s←##.Spec.GetSpecNS ns
+     s.description←'Line chart'
+     _←s.encoding.⎕EX'size' ⍝ VL Docs: unsupported for line. Might be cleaner to make msize a param, and pass through to InitEncoding
+     s.width←800
+     s.height←400
+     s.mark←'line'
+     _←ns ##.Spec.PackData ⍵
+     ⍺.HtmlRendererObj ##.Html.Render ns
+ }
