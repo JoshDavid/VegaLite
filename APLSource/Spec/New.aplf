@@ -4,5 +4,6 @@
      ns←⍎n ⎕NS ⍵
      ns.⍙⍙36⍙schema←Schema''   ⍝ JSON name mangling: 0(7162⌶)'$schema'
      ns←InitEncoding ns
+     ns.(height width)←400 600
      ns
  }

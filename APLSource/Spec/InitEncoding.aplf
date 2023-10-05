@@ -2,7 +2,7 @@
 ⍝ ⍵ ←→ ns
      9=⍵.⎕NC 'encoding':⍵ ⍝ For now
      e←⍎'encoding'⍵.⎕NS''
-     s←⍎'size'e.⎕NS''
-     s.value←90
+⍝     s←⍎'size'e.⎕NS''
+⍝     s.value←90   ⍝ why? seems to make lines thicc
      ⍵
  }

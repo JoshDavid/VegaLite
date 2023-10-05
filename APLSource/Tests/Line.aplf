@@ -1,0 +1,20 @@
+ Line←{
+
+     x←(÷⍵)×○2×⍳⍵
+     data←'x' 'Sine(x)'⍪x,⍪1○x
+     spec←##.Spec.New''
+     spec←spec ##.Spec.InjectData data
+     spec←spec ##.Spec.PackageArgs↓⍉data
+     spec.mark←'line'
+     hr←##.Html.Render spec
+
+     y←⍉1 2∘.○x
+     data←'x' 'sine' 'cos'⍪x,y
+     table←('sine' 'cos'##.Utils.Stack)data
+     spec←##.Spec.New''
+     spec←spec ##.Spec.InjectData table
+     spec←spec ##.Spec.PackageArgs↓⍉table
+     spec.mark←'line'
+     hr←##.Html.Render spec
+
+ }
