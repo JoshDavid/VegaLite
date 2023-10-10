@@ -1,5 +1,0 @@
- CommaSeperate←{
-⍝ Append comma to all but last item in a list
-     n←≢⍵
-     ⍵,¨n↑(n-1)⍴','
- }
