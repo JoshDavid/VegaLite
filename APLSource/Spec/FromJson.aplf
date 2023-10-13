@@ -1,5 +1,7 @@
  FromJson←{
      ⍺←''
-     'M'≡⍥(⎕C∘,)⍺:0(⎕JSON ⎕OPT('Dialect' 'JSON5')('Format' 'M'))⍵
-     0(⎕JSON ⎕OPT'Dialect' 'JSON5')⍵
+     in←⍵
+     9=⎕NC'r':in
+     'M'≡⍥(⎕C∘,)⍺:0(⎕JSON ⎕OPT('Dialect' 'JSON5')('Format' 'M'))in
+     0(⎕JSON ⎕OPT'Dialect' 'JSON5')in
  }
