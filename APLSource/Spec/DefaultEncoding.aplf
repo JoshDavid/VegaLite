@@ -2,7 +2,11 @@
 ⍝ By default, 1st column x
 ⍝             2nd column y
 ⍝             3rd column color ]
+     9=⍵.⎕NC'encoding':⍵.encoding
      h←Header ⍵
      c←'x' 'y' 'color'↑⍨≢h
-     1 ⎕JSON⍠'M'⊢0 ''⍬ 1⍪4,⍨1,⍉↑c h
+     enc←0 ⎕JSON 1 ⎕JSON⍠'M'⊢0 ''⍬ 1⍪4,⍨1,⍉↑c h
+     dt←DataType ⍵
+     _←(enc.⎕NL ¯2)(enc{(⍺ InsertSubNamespace ⍵)¨⍺⍺})¨dt[dt.field⍳enc∘⍎¨enc.⎕NL ¯2]
+     enc
  }

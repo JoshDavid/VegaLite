@@ -1,0 +1,10 @@
+ MakeEncoding←{
+⍝ ⍵ ←→ JSON text
+⍝ ⍺ ←→ VL spec ns
+⍝ ← ←→ VL spec encoding ns
+     dt←DataType ⍺
+     opt←FromJson ⍵
+     0∊⍴opt.⎕NL-⍳9:opt
+     _←(opt.⎕NL ¯2)(opt{(⍺ InsertSubNamespace ⍵)¨⍺⍺})¨dt[dt.field⍳opt∘⍎¨opt.⎕NL-⍳9]
+     opt
+ }
