@@ -1,0 +1,7 @@
+ BoxPlot←{
+     s←##.Spec
+     enc←'{x:"Species", y:"Body Mass (g)", color:"Species"}'
+     mark←'{type:"boxplot", extent:"min-max"}'
+     title←'{title:"Penguin species vs. body mass"}'
+     enc s.Encode mark s.Mark title s.Chart Data.penguin
+ }
