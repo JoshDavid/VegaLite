@@ -1,0 +1,3 @@
+ Scatter←{
+     ##.Chart.Scatter Data.car[;4 8]
+ }

@@ -1,8 +1,0 @@
- Type2Int←{
-⍝ ⍵ ←→ Description
-⍝ ← ←→ Integer
-⍝ See ⎕JSON docs
-     t←'Object' 'Array' 'Numeric' 'String'
-     t,←'Null' 'Boolean' 'JavaScript Object'
-     t⍳⍵
- }

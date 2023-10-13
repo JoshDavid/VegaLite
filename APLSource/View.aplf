@@ -1,0 +1,6 @@
+ View←{
+⍝ ⍺ ←→ Optional existing HTMLRenderer object
+⍝ ⍵ ←→ VegaLite specification namespace
+     ⍺←⊢
+     ⍺ Html.Render ⍵
+ }

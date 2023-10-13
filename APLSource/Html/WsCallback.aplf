@@ -1,0 +1,5 @@
+WsCallback←{
+⍝ WebSocket callback for HTMLRenderer
+⍝ SavePng and SaveSvg call JS functions on page
+
+}

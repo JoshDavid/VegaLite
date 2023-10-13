@@ -1,8 +1,7 @@
- InjectJson←{
+ InjectSpec←{
 ⍝ ⍺ ←→ HtmlRenderer object
 ⍝ ⍵ ←→ JSON spec
      h←⍺.HTML
-     h←h Inject'<head>'(InnerHead'')
      h←h Inject'<body>'(InnerBody ⍵)
      ⍺.HTML←h
      ⍺

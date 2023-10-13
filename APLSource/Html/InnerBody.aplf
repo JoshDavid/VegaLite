@@ -2,8 +2,8 @@
 ⍝ ⍵ ←→ JSON spec
      b←'<div id="vis"></div>'
      b,←'<script> '
-     b,←'var vlSpec = ',⍵,NL
-     b,←'vegaEmbed(''#vis'',vlSpec);'
+     b,←'var vlSpec = ',⍵,⎕UCS 10
+     b,←'vegaEmbed(''#vis'',vlSpec, {"actions":false});'
      b,←'</script>'
      b
  }

@@ -1,0 +1,8 @@
+ DefaultEncoding←{
+⍝ By default, 1st column x
+⍝             2nd column y
+⍝             3rd column color ]
+     h←Header ⍵
+     c←'x' 'y' 'color'↑⍨≢h
+     1 ⎕JSON⍠'M'⊢0 ''⍬ 1⍪4,⍨1,⍉↑c h
+ }

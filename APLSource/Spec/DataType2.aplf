@@ -1,4 +1,4 @@
- DataType←{
+ DataType2←{
 ⍝ ⍵ ←→ Raw data
 ⍝ ← ←→ VegaLite datatype representation
 ⍝  Infers one of: quantitative, nominal

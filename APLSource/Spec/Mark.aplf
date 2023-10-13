@@ -1,0 +1,8 @@
+ Mark←{
+⍝ ⍵ ←→ VegaLite spec object
+⍝ ⍺ ←→ mark specification :: simple character vector or JSON text
+⍝ ← ←→ Spec with added Mark value
+     convert←'"[{'(∨/⍤∊)⊃⍺   ⍝ Try to convert (JSON string, list or object)
+     ⍵.mark←(FromJson⍣convert)⍺
+     ⍵
+ }

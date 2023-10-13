@@ -1,0 +1,10 @@
+ Encode←{
+⍝ ⍵ ←→ VL spec
+⍝ ← ←→ Added encoding channel spec
+     ⍺←DefaultEncoding ⍵
+     enc←FromJson ⍺
+     dt←DataType ⍵
+     _←(enc.⎕NL ¯2)(enc{(⍺ InsertSubNamespace ⍵)¨⍺⍺})¨dt[dt.field⍳enc∘⍎¨enc.⎕NL ¯2]
+     ⍵.encoding←enc
+     ⍵
+ }
