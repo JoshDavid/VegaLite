@@ -1,0 +1,9 @@
+ MergeNS←{
+⍝ Override array values in ⍵ with those in ⍺
+⍝ Merge namespaces in ⍵ with those in ⍺
+     to←⍵
+     from←⍺
+     _←'to'⎕NS'from.'∘,¨from.⎕NL ¯2
+     _←('to.'∘,¨names)⎕NS¨from∘⍎¨names←from.⎕NL ¯9
+     to
+ }
