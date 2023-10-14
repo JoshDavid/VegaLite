@@ -1,0 +1,24 @@
+ Pie←{
+     yield←DataObjectFromCSV'/d/presentations/dyalog23/crop-yield/yield_df.csv'
+     yield_by_item←'Crop' 'Total yield (Hg/Ha)'⍪yield.((Column'item'),∘(+/)⌸Column'hg/ha_yield')
+     ##.Chart.Pie⌽yield_by_item
+     ##.Spec.(Encode'arc'Mark Chart)⌽yield_by_item
+
+     c←##.Spec.('{color:"Crop", theta:{field:"Total yield (Hg/Ha)", stack:true}}'Encode'arc'Mark Chart)yield_by_item
+
+
+
+
+     c←##.Spec.('{color:"Crop",theta:{field:"Total yield (Hg/Ha)", type:"quantitative", stack:true}}'EncodeNew Chart)yield_by_item
+     arc←'arc'##.Spec.Mark ⎕NS''
+     label←'{text:{field:"Crop"}}'('encoding'##.Spec.Override)'{type:"text", radius:120, fill:"black"}'##.Spec.Mark ⎕NS''
+     c←(arc label)Layer c
+
+     c←'arc'Mark Chart yield_by_item
+     c.encoding←##.Spec.FromJson'{color:{field:"Crop", type:"nominal"}, theta:{field: "Total yield (Hg/Ha)", type:"quantitative"}}'
+
+     c.encoding←⎕NS''
+     c.encoding.(color theta)←⎕NS¨2⍴⊂''
+     c.encoding.color.(field type)←'Crop' 'nominal'
+     c.encoding.theta.(field type)←'Total yield (Hg/Ha)' 'quantitative'
+}
