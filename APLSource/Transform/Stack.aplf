@@ -1,0 +1,16 @@
+ Stack←{
+     ⍺←'value' 'key'
+     data←⍵
+     cols←1↓1⌷⍵
+⍝    ⍺: [optional] specifies the names of newly stacked "key" and "value" columns
+⍝ data: nested matrix with header
+⍝ cols: specifies names of columns to stack. these names become the keys in the "key" column
+     head←1⌷data ⋄ data←1↓data
+     stack←head∊⊆cols
+     repeat←~stack
+     key←(≢data)/cols
+     stacked←key,⍨⍪,⍉stack/data
+     repeated←((≢stacked),+/repeat)⍴repeat/data
+     header←⍺,⍨repeat/head
+     header⍪repeated,stacked
+ }
