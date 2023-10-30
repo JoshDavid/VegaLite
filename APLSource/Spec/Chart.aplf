@@ -5,7 +5,7 @@
 ⍝ ← ←→ Vega-Lite specification namespace
 ⍝ ⍺ ←→ Optional top-level specification parameters e.g. title
      s←New''
-     s←⍵ InjectData s
+     s←{0∊⍴⍵:s ⋄ ⍵ InjectData s}⍵
      ⍺←'{}'                     ⍝ User parameters
      s.(width height)←600 400   ⍝ Default width/height
      _←'s'⎕NS FromJson ⍺
