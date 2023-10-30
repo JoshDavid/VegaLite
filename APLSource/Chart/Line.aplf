@@ -1,0 +1,3 @@
+ Line←{
+     ##.Spec.(Encode'line'Mark Chart)⍵
+ }
