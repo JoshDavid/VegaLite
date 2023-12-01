@@ -24,13 +24,16 @@ View Chart.HeatMapCorrelation Example.Data.corrMat
 x←(÷×(○2×⍳))1000   ⍝ 1000 number from 0 to 2×pi
 y←1○x              ⍝ sine(x)
 data←'x' 'sine(x)'⍪x,⍪y
-##.(View Chart.Line) data
+View Chart.Line data
 ```
 
 ![Line graph of sine function](./img/line.svg)
 
 ## Pie chart
-
+```
+total←Example.Data.(barley[;2],∘(+/)⌸barley[;4])
+View Chart.Pie ⌽total
+```
 
 ## Scatter plot
 ```

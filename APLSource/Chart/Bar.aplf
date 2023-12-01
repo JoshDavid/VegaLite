@@ -1,3 +1,4 @@
  Bar←{
-     ##.Spec.(Encode'bar'Mark Chart)⍵
+     ⍺←'{}'
+     ##.Spec.(Encode'bar'Mark ⍺ Chart⊢)⍵
  }

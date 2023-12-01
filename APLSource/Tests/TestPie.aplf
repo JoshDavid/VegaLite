@@ -1,0 +1,4 @@
+ TestPie←{
+     total←##.Example.Data.(barley[;2],∘(+/)⌸barley[;4])
+     ##.(View Chart.Pie)⌽total
+ }
