@@ -1,5 +1,3 @@
  ToJson←{
-⍝ ⍵ ←→ Namespace
-⍝ ← ←→ JSON representaqtion
-     1 ⎕JSON(⍠'Compact' 0)⍵
+     1(⎕JSON ⎕OPT'Compact' 0)⍵
  }

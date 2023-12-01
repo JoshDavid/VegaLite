@@ -1,0 +1,5 @@
+ Header←{
+⍝ ⍵ ←→ VegaLite chart object
+⍝ ← ←→ Header from data CSV text
+     ,(⎕CSV ⎕OPT'Records' 1)⍵.data.values'S'
+ }

@@ -1,0 +1,3 @@
+ BoxPlot←{
+     '{color:"Species"}'##.Spec.Encode ##.Chart.BoxPlot Data.penguin
+ }

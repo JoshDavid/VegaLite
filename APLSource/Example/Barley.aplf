@@ -1,0 +1,8 @@
+ Barley←{
+⍝ https://altair-viz.github.io/gallery/beckers_barley_wrapped_facet.html
+⍝ Richard Morris et. al. http://ml.stat.purdue.edu/stat695t/writings/Trellis.User.pdf
+
+     total←Data.(barley[;2 1]{⍺[1],(+/⍵),⍺[2]}⌸barley[;4])
+     ##.(View'{xOffset:{field:"Year"}, color:{type:"nominal"}}'Spec.Encode'{title:"The Morris Mistake"}'Chart.Bar⊢)total
+
+ }

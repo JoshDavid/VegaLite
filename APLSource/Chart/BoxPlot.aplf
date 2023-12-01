@@ -1,0 +1,6 @@
+ BoxPlot←{
+⍝ ⍵ ←→ APL data table
+⍝ ← ←→ Vega-Lite specification namespace
+     s←##.Spec
+     s.Encode'{type:"boxplot",extent:"min-max"}'s.Mark'{title:"BoxPlot"}'s.Chart ⍵
+ }

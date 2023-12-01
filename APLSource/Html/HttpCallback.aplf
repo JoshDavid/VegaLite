@@ -1,0 +1,14 @@
+ HttpCallback←{
+⍝ HTTP Callback for HTMLRenderer object
+⍝ Serves file contents from <script> tags on page load
+     r←⍵
+     url←8⊃r
+     root←'http://dyalog_root/'
+     ~root(⊃⍷)url:'Web resource not found'⎕SIGNAL 6
+     resource←url↓⍨≢root
+     idx←Resources.key⍳⊂resource
+     idx>≢Resources.key:'Local resource not found'⎕SIGNAL 6
+     r[4 5 6 7]←1 200 'OK' 'text/javascript'
+     r[10]←Resources.value[idx]
+     r
+ }

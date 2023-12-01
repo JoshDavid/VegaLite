@@ -1,0 +1,3 @@
+ HeatMap←{
+     ##.Spec.(Encode'rect'Mark'{config:{axis:{grid:true,tickBand:"extent"}}}'Chart⊢)⍵
+ }

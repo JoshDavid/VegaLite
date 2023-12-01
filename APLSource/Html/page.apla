@@ -1,0 +1,1 @@
+'<!DOCTYPE HTML>',(⎕UCS 13),'<html>',(⎕UCS 13),'<head>',(⎕UCS 13),'<script src="vega@5.20.2"></script>',(⎕UCS 13),'<script src="vega-lite@5.1.0"></script>',(⎕UCS 13),'<script src="vega-embed@6.17.0"></script>',(⎕UCS 13),'<script>',(⎕UCS 13),'const ws = new WebSocket("ws://dyalog_root")',(⎕UCS 13 13),'</script>',(⎕UCS 13),'</head>',(⎕UCS 13),'<body>',(⎕UCS 13),'</body>',(⎕UCS 13)

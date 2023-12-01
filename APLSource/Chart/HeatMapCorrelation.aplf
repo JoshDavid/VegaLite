@@ -1,0 +1,8 @@
+ HeatMapCorrelation←{
+⍝ ⍵ ←→ nested matrix
+⍝      1st column nominal variable x axis
+⍝      2nd column nominal variable y axis
+⍝      3rd column correlation coefficient
+⍝ ← ←→ namespace VegaLite specification
+     '{color:{scale:{scheme:"redblue", domain:[-1,1]}}}'##.Spec.Encode HeatMap ⍵
+ }

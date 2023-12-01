@@ -1,9 +1,0 @@
- AddColor←{
-⍝ ⍵ ←→ ns
-⍝ ⍺ ←→ {axis to base color from (default x)} {Color scheme}
-     ⍺←'x'
-     e←⍵.encoding
-     c←⍎'color'e.⎕NS''
-     c.(field type)←(e⍎⊃⍺).(field type)
-     0
- }

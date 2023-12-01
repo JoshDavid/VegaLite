@@ -1,0 +1,8 @@
+ InjectSpec←{
+⍝ ⍺ ←→ HtmlRenderer object
+⍝ ⍵ ←→ JSON spec
+     h←⍺.HTML
+     h←h Inject'<body>'(InnerBody ⍵)
+     ⍺.HTML←h
+     ⍺
+ }

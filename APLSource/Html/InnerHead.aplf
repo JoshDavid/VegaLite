@@ -1,7 +1,0 @@
- InnerHead←{
-     h←IncludeScripts''
-     h,←' <style media ="screen">'
-     h,←'.vega-actions a { margin-right: 5px; }'
-     h,←'</style>'
-     h
- }

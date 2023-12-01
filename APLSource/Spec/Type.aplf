@@ -1,0 +1,9 @@
+ Type←{
+⍝ ⍵ ←→ VL chart object
+⍝ ← ←→ VegaLite datatype representation
+⍝  One of: quantitative, nominal
+⍝  Not yet implemented:  ordinal, temporal, geojson
+⍝ See https://vega.github.io/vega-lite/docs/type
+     DT←{(⎕IO+∧/IsChar ⍵)⊃'quantitative' 'nominal'}
+     DT¨2⌷(⎕CSV ⎕OPT'Records' 2)(⍵.data.values)'S' 4
+ }

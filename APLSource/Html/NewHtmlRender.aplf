@@ -1,7 +1,11 @@
  NewHtmlRender←{
+⍝ ⍵ ←→ Namespace of HTMLRenderer options
      n←⎕THIS ##.Utils.UniqueName'hr'
      hr←⍎n ⎕WC'HtmlRenderer'(stdInt'')
+     hr.onHTTPRequest←'HttpCallback'
      hr.Caption←'APL2Vega'
-     hr.HTML←InitHtml''
+     hr.Size←54 53
+     0∊⍴⍵:hr
+     _←⍎¨'hr.'∘,¨o,¨'←⍵.'∘,¨o←⍵.⎕NL ¯2
      hr
  }

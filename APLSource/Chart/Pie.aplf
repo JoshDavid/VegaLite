@@ -1,0 +1,3 @@
+ Pie←{
+     ##.Spec.(Encode'arc'Mark Chart)⍵
+ }

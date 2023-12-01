@@ -1,0 +1,11 @@
+ Encode←{
+⍝ ⍵ ←→ VL spec
+⍝ ← ←→ Added encoding channel spec
+     ⍺←'{}'
+     enc←DefaultEncoding ⍵   ⍝ default or existing encoding
+     opt←⍵ MakeEncoding ⍺    ⍝ merge ⍺ with encoding in ⍵/
+     0∊⍴opt.⎕NL-⍳9:⍵⊣'encoding'⍵.⎕NS enc
+     enc←opt MergeNS enc
+     _←'encoding'⍵.⎕NS enc
+     ⍵
+ }

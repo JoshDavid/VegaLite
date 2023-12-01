@@ -1,0 +1,18 @@
+ MakeEncoding←{
+⍝ ⍵ ←→ JSON text
+⍝ ⍺ ←→ VL spec ns
+⍝ ← ←→ VL spec encoding ns
+     dt←DataType ⍺
+     opt←FromJson ⍵
+     0∊⍴opt.⎕NL-⍳9:opt
+    ⍝ String encoding parameters are fields for encoding channels
+     nc←¯2
+     _←(opt.⎕NL nc)(opt{(⍺ InsertSubNamespace ⍵)¨⍺⍺})¨dt[dt.field⍳opt∘⍎¨opt.⎕NL nc]
+    ⍝ Channels without user provided types get inferred types
+     sub←opt.⍎¨opt.⎕NL ¯9
+     Has←{0≠⊃,/⍺.⎕NC⊆⍵}
+     give_type←sub/⍨(sub Has'type')<(sub Has'field')
+     0∊⍴give_type:opt
+     give_type.type←dt.type[dt.field⍳give_type.field]
+     opt
+ }

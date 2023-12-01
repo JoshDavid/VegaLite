@@ -1,0 +1,6 @@
+ DataObjectFromCSV←{
+     do←⎕NS'' ⋄ _←do.⎕DF'[DataObject]'
+     do.(data head)←⎕CSV ⍵ ⍬ 4 1
+     do.(Column←{data[;head⍳⍥⎕C⊆⍵]})
+     do
+ }

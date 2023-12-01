@@ -3,5 +3,6 @@
 ⍝ ⍵ ←→ NS of the entire spec
      j←##.Spec.ToJson ⍵
      ⍺←NewHtmlRender''
-     ⍺ InjectJson j
+     ⍺.HTML←page ⍝InitHtml''
+     ⍺ InjectSpec j
  }

@@ -1,0 +1,7 @@
+ InsertSubNamespace←{
+⍝ Copy values from namespace ⍵⍵ into sub-ns ⍺⍺ in ⍵
+     ForceNs←{9≠⍵.⎕NC ⍺:⍵⍎⍺⊣⍎'⍵.',⍺,'←⎕ns⍬' ⋄ ⍵⍎⍺}   ⍝ Create subns ⍺ unless already a subns
+     sub←⍺⍺ ForceNs ⍵
+     _←'sub' ⎕NS ⍵⍵
+     ⍵
+ }

@@ -1,0 +1,5 @@
+ Scatter←{
+⍝ ⍵ ←→ APL data table
+⍝ ← ←→ Vega-Lite specification namespace
+     ##.Spec.(Encode 'point' Mark Chart)⍵
+ }
