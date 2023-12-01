@@ -12,6 +12,11 @@ Chart.Bar'AB'⍪'XYZ',⍪5 10 20
 ## Bubble chart
 
 ## Correlation heat map
+```
+Chart.HeatMapCorrelation Example.Data.corrMat
+```
+
+![Correlation heat map](./img/correlation-heatmap.svg)
 
 ## Line graph
 
